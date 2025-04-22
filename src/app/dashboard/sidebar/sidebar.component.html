@@ -1,0 +1,23 @@
+<div class="sidebar">
+
+<div class="header">
+    <div class="logo">
+        <span class="logo-text">BH</span>
+    </div>
+</div>
+
+<div class="sidebar-content">
+    <nav class="sidebar-items">
+        <ul>
+            <li *ngFor="let item of items">
+                <a [routerLink]="item.router">
+                    <span class="material-icons">{{ item.icon }}</span>
+                    <span class="menu-item">{{ item.name }}</span>
+                </a>
+             
+            </li>
+          </ul>
+    </nav>
+</div>
+
+</div>

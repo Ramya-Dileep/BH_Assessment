@@ -1,0 +1,78 @@
+.loginBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2A3650;
+}
+
+.loginContent{
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-family: lucida Sans;
+}
+
+form {
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.UserInput::placeholder{
+    font-size: 0.85rem; 
+    padding-left: 0.2cm;
+}
+
+.UserInput{
+    background-color: #2A3650; 
+    color:  white;
+    border: 2px solid #ccc;
+    width: 250px;
+    height: 35px;
+}
+
+.login {
+    width: 250px;
+    height: 35px;
+    border: 1px solid white;
+    background-color: white;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    font-size: 16px;
+    color: black;
+    align-items: center;
+}
+
+.material-icons {
+    position: absolute;
+    top: 48%;
+    left: 42%;
+    font-size: 20px;
+    color: #999;
+    padding-right: 5%;
+}
+
+
+.errormsg{
+    color: red;
+}
+  
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }  

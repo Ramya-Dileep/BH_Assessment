@@ -1,0 +1,22 @@
+<table  class="table table-hover">
+    <caption class="table-title">Projects</caption>
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>File Type</th>
+        <th>Date</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of tableData; track $index) {
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.author}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+

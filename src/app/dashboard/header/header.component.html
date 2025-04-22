@@ -1,0 +1,32 @@
+<div class="header">
+    <div class="title">
+     <h1 class="title">Dashboard</h1>
+    </div>
+
+    <div class="profile">
+        <div class="nav-item" (click)="DropdownClick()" tabindex="0" (blur)="DropdownClose()">
+            <button class="profile-button">
+                <span class="material-icons">account_circle</span>{{userName}}
+                <span class="material-icons">arrow_drop_down</span>
+            </button>
+        </div>
+        
+            <div class="dropdown-content"  *ngIf="dropdownOpen">
+
+                <ul>
+                    <li *ngFor="let item of dropDownItems">
+                      <a [routerLink]="item.router" class="dropdown-item">
+                        <span class="material-icons">{{ item.icon }}</span>
+                        <span>{{ item.name }}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item" (click)="logout()">
+                        <span class="material-icons">logout</span>
+                        <span>Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+    </div>
+</div>

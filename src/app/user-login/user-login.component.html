@@ -1,0 +1,23 @@
+<div class = 'loginBackground'>
+    <div class = "loginContent">
+    <h1>BH</h1>  
+    <form (ngSubmit) = "onLogin()" name = "loginForm" [formGroup] = "loginForm">
+        <div>
+            <input class = "UserInput" formControlName="userName"  placeholder="USERNAME"/>
+            <div class="errormsg" *ngIf="loginForm.get('userName')?.invalid && loginForm.get('userName')?.touched">
+              <span  *ngIf="loginForm.get('userName')?.errors?.['required']">UserName is required.</span>
+            </div>
+        </div>
+        <div>
+            <input class = "UserInput" formControlName="password" type="password" placeholder="PASSWORD" maxlength="12"/>
+            <div class="errormsg" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+              <span  *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+            </div>
+        </div>
+
+        <button class="login" type="submit" [disabled]="loginForm.invalid">LOGIN</button>
+        
+    </form> 
+</div>
+</div>
+
